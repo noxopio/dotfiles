@@ -3,29 +3,50 @@
 # Cargado automáticamente desde .bashrc
 
 # ── Navegación ────────────────────────────────────────────────────────────────
+alias .='cd '
 alias ..='cd ..'
+alias ...='cd ../..'
+
+# ── Terminal ──────────────────────────────────────────────────────────────────
 alias cl='clear'
 alias list='ls -1 | nl'
+alias ll='ls -l'
+alias ls='ls -F --color=auto --show-control-chars'
 
 # ── Git ───────────────────────────────────────────────────────────────────────
 alias +='git add .'
+alias branch='git branch'
 alias gcd='git checkout develop'
 alias gd='git diff'
+alias gitrt='git restore .'
+alias gl='git log'
 alias gpd='git pull origin develop'
 alias graph='git log --all --decorate --oneline --graph'
 alias gs='git status -s'
 alias last='git log -1 --oneline'
 alias new='git checkout -b'
-alias push='git push origin '
 alias push-current='git push -u origin HEAD'
+alias push='git push origin'
 alias resetC='git reset --soft HEAD~1'
 alias unstage='git reset HEAD --'
 
 # ── Node / npm ────────────────────────────────────────────────────────────────
+alias jrc='npm run test:coverage'
+alias nle='npm i --legacy-peer-deps'
+alias node='winpty node.exe'
+alias package='ng build && npm run package'
+alias ps-node='ps aux | grep "[n]ode"'
+alias run-t='npm run test:sonar'
 alias runM='start bash -c "npm run dev"'
 alias runS='start bash -c "npm run start:local"'
-alias run-t='npm run test:sonar'
+alias testRrun='ng test --code-coverage'
 alias toolKill='ps aux | grep "[n]ode" | awk '\''{print $1}'\'' && kill $(ps aux | grep "[n]ode" | awk '\''{print $1}'\'')'
+
+# ── Python ────────────────────────────────────────────────────────────────────
+alias activated='source venv/Scripts/activate'
+alias killapp="pkill -f 'python -m app.main'"
+alias json='jq .'
+alias py='python3'
 
 # ── ZTA ───────────────────────────────────────────────────────────────────────
 alias ztaDev='printf "\e[32m \n<..........OPEN.....ZTA.......>\e[0m\n" && cd ~/Documents/ZTA && code .'
@@ -35,6 +56,18 @@ alias ztaRun='printf "\e[32m \n<..........RUN.....ZTA.......>\e[0m\n" && ./mf-to
 alias runMongo="cd /c/Program\ FILES/MongoDB/Server/8.2/bin && ./mongod.exe --dbpath /c/data/db/"
 alias runMongosh="cd /c/Program\ FILES/MongoDB/mongosh && ./mongosh.exe --port 27017"
 alias cdMongo="cd /c/Program\ FILES/MongoDB/Server/8.2/bin"
+
+# ── Compresión ────────────────────────────────────────────────────────────────
+alias comprimir='tar -czvf'
+alias descomprimir='tar -xzvf'
+
+# ── Proyectos ─────────────────────────────────────────────────────────────────
+alias dev='cd dev/dev && code .'
+alias portal='cd dev/dev && code . && ./microfronts.sh run'
+alias portals='./microfronts.sh'
+
+# ── Windows ───────────────────────────────────────────────────────────────────
+alias winget='winpty winget.exe'
 
 # ── Mantenimiento del shell ───────────────────────────────────────────────────
 alias reload='source ~/.bashrc'
