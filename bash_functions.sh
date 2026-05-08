@@ -83,12 +83,12 @@ Dassh() {
     fi
 }
 #extraer Urls unicas 
-#cat repos.json | urls_unicas
-#curl https://api.ejemplo.com/repos | urls_unicas salida.txt
+#cat repos.json | clean_urls
+#curl https://api.ejemplo.com/repos | clean_urls salida.txt
 clean_urls() {
   jq -r '.[].weburl' \
   | sed 's/%20/ /g' \
   | tr '[:upper:]' '[:lower:]' \
   | sort -u \
-  > "${1:-urls_unicas.txt}"
+  > "${1:-clean_urls.txt}"
 }
