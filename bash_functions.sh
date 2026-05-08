@@ -82,3 +82,13 @@ Dassh() {
         ssh-add ~/.ssh/id_rsa_perfil2
     fi
 }
+#extraer Urls unicas 
+#cat repos.json | urls_unicas
+#curl https://api.ejemplo.com/repos | urls_unicas salida.txt
+clean_urls() {
+  jq -r '.[].weburl' \
+  | sed 's/%20/ /g' \
+  | tr '[:upper:]' '[:lower:]' \
+  | sort -u \
+  > "${1:-urls_unicas.txt}"
+}
