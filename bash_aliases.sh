@@ -74,3 +74,5 @@ alias reload='source ~/.bashrc'
 alias edita='code ~/.bash_aliases'
 alias editf='code ~/.bash_functions'
 alias editrc='code ~/.bashrc'
+# ── Abrir navegador modo incognito ───────────────────────────────────────────────────
+alias navI='printf "\e[32m \n<.............INCOGNITO............>\e[0m\n" && start chrome --incognito "http://localhost:5174/"'
