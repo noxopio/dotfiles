@@ -84,4 +84,6 @@ alias runSura='printf "\e[32m\n<..........RUN.....SURA.......>\e[0m\n" \
 && cd ~/MCP_SURA/SURA_FRONTEND_DEV/1250-orqintegrac_agiamg_fe_spa-fr \
 && start bash -c "npm run dev" \
 && start chrome --incognito "http://localhost:5174/"'
+ # ── Open host ───────────────────────────────────────────────────
+alias openhost='code /C/Windows/System32/drivers/etc/hosts' 
 
