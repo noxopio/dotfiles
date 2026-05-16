@@ -76,3 +76,12 @@ alias editf='code ~/.bash_functions'
 alias editrc='code ~/.bashrc'
 # ── Abrir navegador modo incognito ───────────────────────────────────────────────────
 alias navI='printf "\e[32m \n<.............INCOGNITO............>\e[0m\n" && start chrome --incognito "http://localhost:5174/"'
+#abrir el navegador 
+alias Dll='printf "\e[32m \n<.............SURA.......DLL........>\e[0m\n" && start chrome --incognito  "https://rooms.agencia.ia.dllosura.com/"'
+alias suraL='printf "\e[32m \n<.............SURA.......LOCAL......>\e[0m\n" && start chrome --incognito "http://localhost:5174/"'
+
+alias runSura='printf "\e[32m\n<..........RUN.....SURA.......>\e[0m\n" \
+&& cd ~/MCP_SURA/SURA_FRONTEND_DEV/1250-orqintegrac_agiamg_fe_spa-fr \
+&& start bash -c "npm run dev" \
+&& start chrome --incognito "http://localhost:5174/"'
+
