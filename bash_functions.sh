@@ -86,9 +86,10 @@ Dassh() {
 #cat repos.json | clean_urls
 #curl https://api.ejemplo.com/repos | clean_urls salida.txt
 clean_urls() {
-  jq -r '.[].weburl' \
-  | sed 's/%20/ /g' \
-  | tr '[:upper:]' '[:lower:]' \
-  | sort -u \
-  > "${1:-clean_urls.txt}"
+    jq -r '.[].webUrl' \
+    | sed 's/%20/ /g' \
+    | tr '[:upper:]' '[:lower:]' \
+    | sort -u \
+    > "${1:-clean_urls.txt}"
 }
+
