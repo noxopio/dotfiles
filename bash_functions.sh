@@ -92,4 +92,8 @@ clean_urls() {
     | sort -u \
     > "${1:-clean_urls.txt}"
 }
+gitls() {
+  printf "\e[32m\n<..........GIT.....LIST.......>\e[0m\n"
+  git ls-remote "$1"
+}
 
