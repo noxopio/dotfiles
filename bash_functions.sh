@@ -92,8 +92,14 @@ clean_urls() {
     | sort -u \
     > "${1:-clean_urls.txt}"
 }
+
 gitls() {
-  printf "\e[32m\n<..........GIT.....LIST.......>\e[0m\n"
+  if [ -z "$1" ]; then
+    echo "❌ Debes pasar una URL"
+    return 1
+  fi
+
+  printf "\e[32m\n<..........git.......>\e[0m\n"
   git ls-remote "$1"
 }
 
