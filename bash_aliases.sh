@@ -41,6 +41,7 @@ alias runM='start bash -c "npm run dev"'
 alias runS='start bash -c "npm run start:local"'
 alias testRrun='ng test --code-coverage'
 alias toolKill='ps aux | grep "[n]ode" | awk '\''{print $1}'\'' && kill $(ps aux | grep "[n]ode" | awk '\''{print $1}'\'')'
+alias runTest='npx jest --silent 2>&1 | tail -40'
 
 # ── Python ────────────────────────────────────────────────────────────────────
 alias activated='source venv/Scripts/activate'
